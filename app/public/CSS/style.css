@@ -15,12 +15,16 @@ body
   background-color: transparent;
   border-radius: 3px;
   font-family: 'Lobster', cursive;
+
 }
 
-#titleFont
+h1
 {
  color: #fcfcfc;
+ font-size: 1000%;
 }
+
+
 
 .footer
 {
@@ -39,4 +43,5 @@ header .overlay {
     width: 100%;
     opacity: 0.5;
     z-index: 1;
+
   }

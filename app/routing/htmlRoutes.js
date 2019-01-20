@@ -16,7 +16,6 @@ module.exports = function(app) {
         res.sendFile(path.join(__dirname, "../public/CSS/images/BoatRide.mp4"));
     });
 
-
     // home default
     app.get("*", function(req, res) {
         res.sendFile(path.join(__dirname, "../public/home.html"));
