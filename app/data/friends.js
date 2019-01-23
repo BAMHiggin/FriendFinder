@@ -18,7 +18,7 @@ let surveyArray = [
 
     {
         name: "Beau",
-        photo: "https://www.buzzfeed.com/chelseamarshall/the-37-most-majestic-pugs-of-2014",
+        photo: "https://img.buzzfeed.com/buzzfeed-static/static/2014-12/22/14/enhanced/webdr05/original-7747-1419275328-7.jpg?downsize=800:*&output-format=auto&output-quality=auto",
         scores: [3, 3, 1, 2, 2, 1, 2, 4, 1, 1]
     },
     {
