@@ -1,4 +1,4 @@
-let friendsData = require("../data/friends");
+const friendsData = require("../data/friends");
 
 
 
@@ -10,7 +10,7 @@ module.exports = function(app) {
     }); 
 
     app.post("/api/friends", function(req, res) {
-        friendsData = req.body;
+        friendsData[0] = req.body;
         res.json(friendsData);
     })
 

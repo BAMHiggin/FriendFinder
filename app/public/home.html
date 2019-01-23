@@ -19,6 +19,7 @@
 <body>
     <header>
         <div class="overlay"></div>
+       
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
             <source src="./CSS/images/BoatRide.mp4" type="video/mp4">
         </video>
@@ -39,7 +40,7 @@
                 <br>
 
                 <div class="text-center">
-                    <a href="/survey"><button class="btn btn-outline-light btn-lg"> Find My BFF </button></a>
+                    <a href="/survey"><button class="btn btn-outline-light btn-lg" id="findBFF"> Find My BFF </button></a>
                 </div>
             </div>
         </div>
@@ -49,7 +50,7 @@
 
     <footer class="footer">
         <div class="container" id="titleFont">
-            <p><a href="/api/tables">API Table Link</a> | <a href="/api/survey">API Survey</a>
+            <!-- <p><a href="/survey">Survey</a> -->
         </div>
     </footer>
 
@@ -59,3 +60,14 @@
 </body>
 
 </html>
+
+<!-- <script type="text/javascript">
+
+$("#findBFF").on("click", function (event) {
+    event.preventDefault();
+
+    $.ajax({ url: "/survey", method "GET" })
+
+});
+
+</script> -->
