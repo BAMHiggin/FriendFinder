@@ -23,7 +23,7 @@ let surveyArray = [
     },
     {
         name: "Margie",
-        photo: "https://www.chewy.com/petcentral/pet-parenting-pet-lovers-15-corgi-butts-that-might-break-the-internet/",
+        photo: "https://www.chewy.com/petcentral/wp-content/uploads/2018/05/corgi-butts-main.jpg",
         scores: [2, 3, 2, 5, 5, 4, 3, 2, 4, 6]
     }
 

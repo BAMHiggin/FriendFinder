@@ -72,7 +72,7 @@
                 <option value="5">5 - Strongly Agree</option>
             </select>
 
-            <!-- <br>
+            <br>
             <h2 class="font-weight-bold"> Question 4 </h2>
             <h4 class="font-light-weight"> Free time means time for more Netflix.
             </h4>
@@ -169,7 +169,7 @@
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5 - Strongly Agree</option>
-            </select> -->
+            </select>
 
             <br>
             <hr>
@@ -186,11 +186,11 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button class="close" data-dismiss="modal">&times;</button>
-                    <h2 class="modal-title"><strong>Table Reserved</strong></h2>
+                    <h2 class="modal-title"><strong>Meet your new best friend!</strong></h2>
                 </div>
                 <div class="modal-body">
-                    <h2 id="table-name"></h2>
-                    <img id="table-img" alt="">
+                    <h2 id="friend-name"></h2>
+                    <img id="friend-img" style="width: 100%;" alt="">
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-default" data-dismiss="modal">Close</button>
@@ -235,12 +235,8 @@
             ]
         }
 
-        $.ajax({ url: "/api/friends", method: "GET" }).then(function (friendsData) {
-            // console.log(friendsData);
-
-        });
-
         $.post("/api/friends", newFriend);
+       
 
         // Clear the tables on the server and then empty the elements on the client
         $.ajax({ url: "/api/friends", method: "GET" }).then(function (friendsData) {
@@ -254,25 +250,36 @@
 
                 var userA = friendsData[0]; //setting userA to the empty friends array and collecting responses
                 var userB = friendsData[i];// setting userB to the list of possible matches
+
                 var score = 0;
                 for (j = 0; j < userA.scores.length; j++) {
                     // console.log("User A: " + userA.scores[j]);
                     // console.log("User B: " + userB.scores[j]);
+                    console.log("Hello");
                     score += Math.abs(userA.scores[j] - userB.scores[j]);
                 }
+              
 
                 if (score < bestScore) {
                     bestUser = userB;
                     bestScore = score;
                     //
                 }
+                // console.log("Best User Name = " + bestUser.name + bestScore);
          
            }
-           console.log(bestUser);
            
+           if (bestUser) {
+           $("#friend-name").text(bestUser.name);
+           $("#friend-img").attr("src", bestUser.photo);
+           $(".modal").modal("toggle");
 
+        
+           }
 
         });
+
+
     });
 
 
